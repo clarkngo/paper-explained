@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4+1 View Model - Paper Explained</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 2rem;
+            color: #1c1e21;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+        .paper {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #000;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        h3 {
+            color: #333;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .section {
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to all papers</a>
+        <div class="paper">
+            <h2>Architectural Blueprints—The “4+1” View Model of Software Architecture</h2>
+            <div class="section">
+                <h3 class="section-title">Major Impacts</h3>
+                <ul>
+                    <li><b>Standardized Software Architecture Documentation:</b> It provided a common vocabulary and framework for describing software architecture, reducing ambiguity and improving communication among stakeholders.</li>
+                    <li><b>Addresses Concerns of Different Stakeholders:</b> The model explicitly separates the concerns of end-users, developers, system engineers, and project managers into different views.</li>
+                    <li><b>Improved System Design:</b> By forcing architects to consider different viewpoints, it leads to more robust, resilient, and maintainable systems.</li>
+                    <li><b>Foundation for other Frameworks:</b> It has been highly influential and served as a basis for other architectural frameworks and notations, including UML.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3 class="section-title">ELI5 (Explain Like I'm 5)</h3>
+                <p>Imagine building a house. You'd have different drawings for different people. The plumber needs to see the pipe layout, the electrician needs the wiring diagram, and the owner wants to see what the finished house will look like. The "4+1" model is like that for software. It says you should have different "views" (drawings) of the software for different people (programmers, users, managers) to understand it properly. The "+1" view is the set of scenarios that show how everything works together.</p>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Explained to New Devs</h3>
+                <p>The 4+1 View Model is a way to organize the documentation of a software architecture. Instead of one massive document, it proposes breaking it down into five views. The <b>Logical View</b> shows the system's functionality for end-users (e.g., classes, components). The <b>Process View</b> shows the system's concurrency and synchronization aspects (e.g., processes, threads). The <b>Development View</b> shows how the software is organized in the development environment (e.g., modules, files, libraries). The <b>Physical View</b> shows the deployment of the software on hardware (e.g., servers, network configuration). The <b>Scenarios View</b> (+1) consists of use cases that illustrate how these four views work together.</p>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Explained to Senior Devs</h3>
+                <p>Authored by Philippe Kruchten, this model addresses the challenge of describing a software architecture in a way that is comprehensible to all stakeholders. It decomposes the architectural description into four interconnected views, each addressing a specific set of concerns, and validates them with a fifth view. The <b>Logical View</b> (functional requirements) typically involves class and state diagrams. The <b>Process View</b> (non-functional requirements like performance and scalability) uses activity and sequence diagrams. The <b>Development View</b> (software module organization) is represented by package and component diagrams. The <b>Physical View</b> (system topology and deployment) is shown with deployment diagrams. The Scenarios or Use-Case View (+1) acts as a validation mechanism, demonstrating that the architecture described in the other four views actually fulfills the system's requirements. This separation of concerns was critical for managing the complexity of large, distributed systems.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

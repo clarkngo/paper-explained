@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Explained</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 2rem;
+            color: #1c1e21;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+        .tags {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 18px;
+            background-color: #e4e6eb;
+            color: #050505;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border: none;
+            font-size: 1rem;
+        }
+        .tag:hover, .tag.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #000;
+        }
+        .card p {
+            line-height: 1.5;
+            color: #606770;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Papers Explained</h1>
+        <div class="tags">
+            <button class="tag active" data-filter="all">All</button>
+            <button class="tag" data-filter="NLP">NLP</button>
+            <button class="tag" data-filter="Transformer">Transformer</button>
+            <button class="tag" data-filter="Software Architecture">Software Architecture</button>
+            <button class="tag" data-filter="Foundational">Foundational</button>
+        </div>
+        <div class="grid">
+            <a href="attention-is-all-you-need.html" class="card" data-tags="NLP Transformer Foundational">
+                <h3>Attention Is All You Need</h3>
+                <p>The paper that introduced the Transformer architecture, a novel network architecture based solely on attention mechanisms, and now the foundation of modern NLP.</p>
+            </a>
+            <a href="4+1-view-model.html" class="card" data-tags="Software Architecture Foundational">
+                <h3>Architectural Blueprints—The “4+1” View Model of Software Architecture</h3>
+                <p>A model for describing the architecture of software-intensive systems, based on the use of multiple, concurrent views.</p>
+            </a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tags = document.querySelectorAll('.tag');
+            const cards = document.querySelectorAll('.card');
+
+            tags.forEach(tag => {
+                tag.addEventListener('click', () => {
+                    const filter = tag.getAttribute('data-filter');
+
+                    tags.forEach(t => t.classList.remove('active'));
+                    tag.classList.add('active');
+
+                    cards.forEach(card => {
+                        const cardTags = card.getAttribute('data-tags');
+                        if (filter === 'all' || (cardTags && cardTags.includes(filter))) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

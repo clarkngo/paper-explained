@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Is All You Need - Paper Explained</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 2rem;
+            color: #1c1e21;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+        .paper {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #000;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        h3 {
+            color: #333;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .section {
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to all papers</a>
+        <div class="paper">
+            <h2>Attention Is All You Need</h2>
+            <div class="section">
+                <h3 class="section-title">Major Impacts</h3>
+                <ul>
+                    <li><b>Foundation for Modern NLP:</b> The Transformer architecture is now the de-facto standard for NLP tasks, forming the basis for models like BERT, GPT-3, and many others.</li>
+                    <li><b>Improved Performance:</b> It significantly improved the state-of-the-art in machine translation, text summarization, and question answering.</li>
+                    <li><b>Increased Parallelization:</b> By removing the sequential nature of RNNs, Transformers allowed for much more parallelization, enabling the training of much larger models on larger datasets.</li>
+                    <li><b>Beyond NLP:</b> The attention mechanism and Transformer architecture have been successfully applied to other domains like computer vision and speech recognition.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3 class="section-title">ELI5 (Explain Like I'm 5)</h3>
+                <p>Imagine you're listening to a story. You pay more attention to important words to understand it. For example, if someone says "The <b>cat</b> sat on the <b>mat</b>", you focus on "cat" and "mat". This paper teaches computers to do the same thing with text. It helps them understand which words are most important in a sentence to get the meaning right, which is super helpful for translating languages or answering questions.</p>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Explained to New Devs</h3>
+                <p>Before this paper, we handled sequential data like text with Recurrent Neural Networks (RNNs) or LSTMs, which process words one by one in a loop. This was slow and made it hard to remember long-range dependencies. "Attention Is All You Need" introduced the Transformer model, which processes all words at once. The core idea is the "self-attention" mechanism, which allows the model to weigh the importance of every other word in the input when processing a given word. This parallelization makes training much faster and more effective, and it has become the foundation of most modern NLP models.</p>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Explained to Senior Devs</h3>
+                <p>This paper proposed a novel architecture that completely eschews recurrence and convolutions. The Transformer relies entirely on a self-attention mechanism to draw global dependencies between input and output. The architecture consists of a stack of encoders and decoders. Each encoder has a multi-head self-attention layer followed by a position-wise feed-forward network. Decoders have an additional masked multi-head attention layer to prevent positions from attending to subsequent positions. The use of positional encodings injected at the bottom of the encoder and decoder stacks gives the model information about the relative or absolute position of the tokens in the sequence. This architecture not only achieved state-of-the-art results in machine translation but also offered significant parallelization, leading to faster training times and enabling the development of massive pre-trained models like BERT and GPT.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
