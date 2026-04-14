@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explainable AI for Predictive Maintenance - Paper Explained</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
+    <article class="paper">
+      <h2>Explainable Artificial Intelligence for Predictive Maintenance Applications</h2>
+
+      <section class="paper-section">
+        <h3>Major Impacts</h3>
+        <ul>
+          <li><b>Practical XAI framing:</b> Demonstrates how explanation quality matters in high-stakes maintenance decisions, not just raw classifier metrics.</li>
+          <li><b>Reusable dataset:</b> Provides a realistic synthetic predictive maintenance dataset (10,000 rows) for benchmarking and education.</li>
+          <li><b>Method comparison:</b> Compares explainable models (small decision trees) with model-agnostic explanatory interfaces (normalized feature deviation).</li>
+          <li><b>Actionable trade-off:</b> Shows high-quality explanations can be sparse, while lower-fidelity explanations can be consistently available.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>ELI5</h3>
+        <p>Think of a machine doctor. It's not enough for the doctor to just say, "The machine will break." You want to know <i>why</i>. This paper tests two ways of giving that "why": one gives clearer reasons but sometimes says nothing; the other always gives a reason, but it can be less precise.</p>
+      </section>
+
+      <section class="paper-section">
+        <h3>Explained to New Devs</h3>
+        <p>The author builds a synthetic maintenance dataset with realistic signals (temperature, speed, torque, tool wear, product type) and multiple failure modes. A strong ensemble classifier predicts failure, then two explanation strategies are evaluated on selected failure cases:</p>
+        <ul>
+          <li>Small decision trees (easy to read, often higher-quality explanations)</li>
+          <li>Normalized feature deviations (model-agnostic, always available)</li>
+        </ul>
+        <p>Result: decision trees produce better explanations when they fire, but can fail to explain some cases. Feature-deviation explanations are usually "partially useful" but reliably present.</p>
+      </section>
+
+      <section class="paper-section">
+        <h3>Explained to Senior Devs</h3>
+        <p>This work separates predictive performance from local interpretability. The base model (bagged trees) handles an imbalanced setting (~3.39% failures) with weighted misclassification cost. Explanations are then generated either by constrained surrogate-style trees (max 4 nodes across feature subsets) or by normalized per-feature deviations. Quantitative scoring reveals a precision-coverage trade-off: tree explanations can be semantically richer but have non-trivial abstention; deviation-based interfaces offer stable coverage with lower explanation fidelity. The paper recommends selecting one explanation mode at a time to avoid cognitive conflict and suggests future augmentation with LIME-like methods.</p>
+      </section>
+
+      <section class="paper-section">
+        <h3>Why This Matters for Real Systems</h3>
+        <ul>
+          <li><b>Trust calibration:</b> Operators need reasons for single predictions, not only aggregate validation scores.</li>
+          <li><b>UX over algorithm worship:</b> Explanation availability and clarity are product concerns, not only model concerns.</li>
+          <li><b>Hybrid strategy potential:</b> Use high-fidelity explanations first, then fall back to robust lower-fidelity explanations.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>Citation</h3>
+        <p class="citation">Matzka, S. (2020). Explainable Artificial Intelligence for Predictive Maintenance Applications. 2020 Third International Conference on Artificial Intelligence for Industries (AI4I), 69-74. DOI: 10.1109/AI4I49448.2020.00023.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
