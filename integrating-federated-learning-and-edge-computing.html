@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrating Federated Learning and Edge Computing - Paper Explained</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
+    <article class="paper">
+      <h2>Integrating Federated Learning and Edge Computing for Privacy-Preserving and Real-Time Predictive Maintenance in Industrial IoT Systems</h2>
+
+      <section class="paper-section">
+        <h3>Core Problem and Proposed Solution</h3>
+        <p>Traditional centralized machine learning for industrial monitoring requires raw sensor data to be sent to a central server, creating privacy risk, communication bottlenecks, and latency that weakens real-time fault detection. This dissertation proposes a decentralized framework that combines Federated Learning (FL) and Edge Computing (EC):</p>
+        <ul>
+          <li><b>Federated Learning (FL):</b> Trains models locally on edge nodes and shares encrypted parameter updates instead of raw sensitive data.</li>
+          <li><b>Edge Computing (EC):</b> Executes data processing and inference near the machine source to reduce latency and improve responsiveness.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>Methodology</h3>
+        <ul>
+          <li><b>Research design:</b> Mixed-methods exploratory sequential approach.</li>
+          <li><b>Dataset:</b> AI4I 2020 Predictive Maintenance dataset.</li>
+          <li><b>Models evaluated:</b> CNN, LSTM, and hybrid CNN-LSTM architectures.</li>
+          <li><b>FL algorithms compared:</b> FedAvg, FedProx, FedOpt, FedNova, and FedDyn.</li>
+          <li><b>Environment:</b> Python ecosystem with TensorFlow, PyTorch, and PySyft, plus Docker-based edge emulation for heterogeneous industrial nodes.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>Learning Framework Breakdown</h3>
+        <p>To help master the core ideas, this section explains the dissertation using multiple learning frameworks, moving from definitions to intuition, root-cause reasoning, and practical examples.</p>
+      </section>
+
+      <section class="paper-section">
+        <h3>1) Glossary of Key Terms</h3>
+        <ul>
+          <li><b>Predictive Maintenance (PdM):</b> Using data and AI to predict when a machine is likely to fail so teams can fix it before breakdown.</li>
+          <li><b>Industrial IoT (IIoT):</b> A connected network of sensors, instruments, and machines in industrial environments that collect and share data.</li>
+          <li><b>Edge Computing (EC):</b> Processing data near the machine or at a local server, rather than sending everything to a distant cloud center.</li>
+          <li><b>Federated Learning (FL):</b> A decentralized training method where machines train models locally and only share model updates, not raw data.</li>
+          <li><b>Latency:</b> The delay between detecting an event and making a decision. In industrial safety contexts, lower latency is critical.</li>
+          <li><b>Non-IID Data:</b> Data that differs across machines and sites (for example, due to age, environment, or workload), which complicates global learning.</li>
+          <li><b>FedAvg (Federated Averaging):</b> A federated algorithm that averages model updates from multiple edge nodes to produce a stronger global model.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>2) ELI5 (Explain Like I am Five)</h3>
+        <p>Imagine students in different countries trying to learn the best cookie recipe.</p>
+        <ul>
+          <li><b>Old centralized way:</b> Everyone mails cookies, recipes, and kitchen details to one far-away chef. It is slow, expensive, and exposes private information.</li>
+          <li><b>New FL + Edge way:</b> Each student bakes locally, keeps secrets at home, and only shares lessons learned. The chef combines those lessons and returns a better shared guide for everyone.</li>
+        </ul>
+        <p>This is the same idea in factories: each site keeps sensitive data local, learns quickly at the edge, and still benefits from global intelligence.</p>
+        <p><i>[Image of Federated Learning architecture]</i></p>
+      </section>
+
+      <section class="paper-section">
+        <h3>3) The 7 Whys (Root Cause Analysis)</h3>
+        <p><b>Goal:</b> Understand why this framework is important for the future of industry.</p>
+        <ol>
+          <li><b>Why do we need this framework?</b> Current industrial AI systems are often too slow and risky for modern plants.</li>
+          <li><b>Why are they risky?</b> Centralized approaches collect sensitive data in one place, increasing breach and misuse risk.</li>
+          <li><b>Why is slowness a problem?</b> Cloud round trips introduce latency.</li>
+          <li><b>Why does latency matter?</b> In fast-moving machinery, even short delay can amplify safety and equipment damage risk.</li>
+          <li><b>Why not keep everything on one local machine?</b> A single machine only learns from local failures.</li>
+          <li><b>Why is cross-site learning important?</b> It helps detect rare failures that may not have happened locally yet.</li>
+          <li><b>Why is this research a solution?</b> It combines shared learning (FL) with low-latency local decision-making (EC) while preserving privacy.</li>
+        </ol>
+      </section>
+
+      <section class="paper-section">
+        <h3>4) Example Scenarios</h3>
+        <p><b>Scenario A: Global car manufacturer</b></p>
+        <p>A company operates factories in Germany, the USA, and China and wants paint-defect detection models to improve jointly.</p>
+        <ul>
+          <li><b>Privacy challenge:</b> Sites cannot freely move proprietary production data across borders.</li>
+          <li><b>Framework benefit:</b> Sites share learned updates, not raw images, so each factory gains from others without exposing protected data.</li>
+        </ul>
+
+        <p><b>Scenario B: Off-shore oil rig</b></p>
+        <p>An oil rig has constrained satellite connectivity and requires immediate reaction to pressure spikes.</p>
+        <ul>
+          <li><b>Latency challenge:</b> Sending alerts to a remote cloud can be too slow for safe intervention.</li>
+          <li><b>Framework benefit:</b> Edge inference can react around 0.002 ms per sample, enabling rapid shutdown actions before a cloud-only path would respond.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>Key Findings and Insights</h3>
+        <ul>
+          <li><b>Best overall algorithm:</b> FedAvg delivered the strongest balance with 94.7% test accuracy and 0.955 F1, within 1% of centralized learning.</li>
+          <li><b>Latency gains:</b> FL + EC cut inference latency by up to 60%, averaging 0.002 ms per sample.</li>
+          <li><b>Privacy without major loss:</b> Encrypted parameter exchange caused no statistically significant degradation (p &gt; 0.05).</li>
+          <li><b>Model synergy:</b> LSTM with FedAvg was most feasible for temporal dependency modeling and early failure forecasting.</li>
+          <li><b>Scalability:</b> Stable convergence persisted across heterogeneous and non-IID edge nodes, supporting multi-plant deployment feasibility.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>Practical Applications</h3>
+        <ul>
+          <li><b>Industry fit:</b> High-value sectors such as automotive and oil and gas can reduce downtime and maintenance cost.</li>
+          <li><b>Regulatory alignment:</b> Local data retention supports data protection regimes such as GDPR and CCPA.</li>
+          <li><b>Strategic advantage:</b> Organizations can collaborate on model improvement while protecting proprietary operational data.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h3>Citation</h3>
+        <p class="citation">Vejendla, Kiran Kumar. <i>Integrating Federated Learning and Edge Computing for Privacy-Preserving and Real-Time Predictive Maintenance in Industrial IoT Systems</i>. City University of Seattle, 2026. ProQuest Dissertations &amp; Theses. Publication No. 32574882.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
