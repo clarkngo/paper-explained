@@ -179,3 +179,21 @@ body {
   color: #42506f;
   font-size: 0.9rem;
 }
+
+.site-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.site-footer a:hover {
+  color: var(--primary-strong);
+}
