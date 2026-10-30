@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Harvard RCT finds a purpose-built GPT-4 tutor produced bigger physics learning gains, in less time, than an in-class active learning lesson.">
+  <title>AI Tutoring Outperforms In-Class Active Learning - Paper Explained</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="page" id="main-content">
+    <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
+    <article class="paper">
+      <h1>AI Tutoring Outperforms In-Class Active Learning: An RCT Introducing a Novel Research-Based Design in an Authentic Educational Setting</h1>
+
+      <section class="paper-section">
+        <h2>Core Problem and Proposed Solution</h2>
+        <p>Active learning (peer instruction) is already a well-validated, strong alternative to lecturing in physics education. The authors ask a sharper question: can a carefully engineered AI tutor do even better than that strong benchmark, on identical material, in less time? They built "PS2 Pal," a GPT-4-based tutor with an engineered system prompt, author-supplied step-by-step solutions, sequential guidance through each problem part, and instructional videos, then tested it head-to-head against an in-class active learning lesson.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Methodology</h2>
+        <ul>
+          <li><b>Design:</b> Randomized controlled crossover trial in Harvard's introductory physics course for life sciences, Fall 2023.</li>
+          <li><b>Participants:</b> 233 enrolled students, 194 eligible for analysis; randomized at the level of 2–3 student peer-instruction groups.</li>
+          <li><b>Structure:</b> Two lessons in consecutive weeks (surface tension, then fluid flow); each student experienced both the AI condition and the in-class condition once, with the order reversed between groups.</li>
+          <li><b>Measures:</b> Pre-tests and post-tests per lesson, plus a four-item engagement/enjoyment/motivation/growth-mindset survey.</li>
+          <li><b>Analysis:</b> Mann-Whitney tests, linear regression with controls (prior proficiency, Force Concept Inventory score, prior ChatGPT experience, topic, test version, time on task), and quantile regression to address ceiling effects.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Learning Framework Breakdown</h2>
+        <p>To help master the core ideas, this section explains the paper using multiple learning frameworks, moving from definitions to intuition, root-cause reasoning, and practical examples.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>1) Glossary of Key Terms</h2>
+        <ul>
+          <li><b>Crossover RCT:</b> A trial design where every participant experiences both conditions (here, AI and in-class), just in a different order, so each student acts as their own control.</li>
+          <li><b>Peer instruction / active learning:</b> A teaching method where students discuss and solve problems in small groups during class, instead of just listening to a lecture.</li>
+          <li><b>Force Concept Inventory (FCI):</b> A standard physics test used here as a proxy for students' prior conceptual proficiency.</li>
+          <li><b>Ceiling effect:</b> When a test is too easy for high performers, compressing scores near the maximum and understating true differences between groups.</li>
+          <li><b>Quantile regression:</b> A statistical method used here to estimate effects across the score distribution instead of just the average, which helps when ceiling effects are present.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>2) ELI5 (Explain Like I am Five)</h2>
+        <p>Two groups of students learn the same lesson about why water forms round droplets. One group talks it through together with classmates and a teacher walking the room. The other group works one-on-one with a patient AI coach that walks them through each step, checks their answer, and adjusts on the spot. On the quiz afterward, the AI-coached group did better, finished faster, and said they were more into it.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>3) The 5 Whys (Root Cause Analysis)</h2>
+        <p><b>Goal:</b> Understand why a well-designed AI tutor could beat an already-strong teaching method.</p>
+        <ol>
+          <li><b>Why compare AI tutoring to active learning instead of to lecturing?</b> Because active learning is already the field's strong, well-tested benchmark, so beating it is a much higher bar.</li>
+          <li><b>Why might one-on-one AI tutoring outperform a group activity?</b> Because pacing, feedback, and explanation can be tailored to each individual student instantly, instead of being set by group discussion speed.</li>
+          <li><b>Why does finishing faster matter?</b> Because it frees classroom time for other activities, like problem-solving or projects, without sacrificing the first-exposure learning.</li>
+          <li><b>Why were engagement scores higher with AI, not just test scores?</b> Because immediate, personalized, step-by-step feedback can feel more responsive than waiting on a peer group's pace.</li>
+          <li><b>Why can't this result be generalized to all content?</b> Because the tested material covered recall, application, and analysis, not open-ended synthesis or creative problem-solving, where group discussion may matter more.</li>
+        </ol>
+      </section>
+
+      <section class="paper-section">
+        <h2>4) Example Scenarios</h2>
+        <p><b>Scenario A: Flipped classroom</b></p>
+        <p>A course uses a validated AI tutor like PS2 Pal for students' first exposure to new material at home, then uses freed-up class time for group problem-solving, projects, and discussion — the model the authors explicitly recommend.</p>
+
+        <p><b>Scenario B: Large lecture course with limited TA support</b></p>
+        <p>A 200-student course can't give every student individual tutoring live. An AI tutor can plug that "first exposure" gap for every student simultaneously, something a single instructor and a handful of TAs cannot do in person.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Key Findings and Insights</h2>
+        <ul>
+          <li><b>Bigger learning gains:</b> Median post-test score was 4.5 for the AI group (N=142) versus 3.5 for the in-class group (N=174), from a pre-test median of 2.75; gains in the AI group were more than double. (Mann-Whitney z = -5.6, p &lt; 10⁻⁸.)</li>
+          <li><b>Effect size:</b> 0.63 SD by linear regression, likely an underestimate due to ceiling effects; 0.73 to 1.3 SD by quantile regression.</li>
+          <li><b>Faster, not just better:</b> The AI group's median time was 49 minutes versus an assumed 60-minute in-class lesson; 70% finished in under 60 minutes, with no correlation between time on task and score.</li>
+          <li><b>Higher engagement and motivation:</b> Engagement averaged 4.1 vs. 3.6 (p &lt; 0.0001) and motivation 3.4 vs. 3.1 (p &lt; 0.001); enjoyment and growth mindset did not differ significantly.</li>
+          <li><b>Perceived quality:</b> 83% of the AI group rated the tutor's explanations as at least as good as a human instructor's.</li>
+          <li><b>Robustness:</b> Results held across students with low and high baseline FCI scores and across different course-attitude levels.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Practical Applications</h2>
+        <ul>
+          <li><b>Flipped-classroom redesign:</b> Use a validated AI tutor for first exposure, reserving class time for higher-order work.</li>
+          <li><b>Complement, not replace:</b> The authors frame AI tutoring as a complement to in-person teaching, not a substitute for it.</li>
+          <li><b>Engineering matters:</b> Success depended on expert-written prompts, pre-written step-by-step solutions, and quality videos — a bare chatbot is not the same intervention.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Caveats</h2>
+        <p>The study was conducted at a single institution, and the content tested mostly the understanding, applying, and analyzing levels of Bloom's Taxonomy — the authors do not claim the results generalize to tasks needing complex synthesis or open-ended critical thinking. Several authors also helped design the active-learning approach used as the control, and long-term retention was not measured.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Citation</h2>
+        <p class="citation">Kestin, G., Miller, K., Klales, A., Milbourne, T., &amp; Ponti, G. (2025). AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting. <i>Scientific Reports</i>, 15, 17458. <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">https://doi.org/10.1038/s41598-025-97652-6</a></p>
+      </section>
+    </article>
+
+    <footer class="site-footer">
+      <a href="https://github.com/clarkngo/paper-explained" target="_blank" rel="noopener">View on GitHub</a>
+    </footer>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

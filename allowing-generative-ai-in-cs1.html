@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Weekly oral code-review interviews plus a flipped classroom let a CS1 course allow AI use without hurting exam scores.">
+  <title>Allowing Generative AI in CS1 - Paper Explained</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="page" id="main-content">
+    <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
+    <article class="paper">
+      <h1>Allowing Generative AI in CS1 with Code Review Interviews and a Flipped Classroom</h1>
+
+      <section class="paper-section">
+        <h2>Core Problem and Proposed Solution</h2>
+        <p>Students in introductory programming (CS1) courses increasingly use LLMs to generate code, which risks letting them submit working assignments without building the debugging and reasoning skills CS1 is meant to teach. Rather than trying to detect or ban AI use, which is unreliable and easy to route around, the authors propose verifying understanding directly:</p>
+        <ul>
+          <li><b>Weekly oral code review interviews:</b> Students must explain their own submitted code, regardless of whether an LLM helped write it.</li>
+          <li><b>Flipped classroom:</b> Concepts are learned outside class, freeing in-class time to run the interviews.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Methodology</h2>
+        <ul>
+          <li><b>Data:</b> Three semesters of a CS1 course, including exam scores, keystroke logs, and end-of-term student surveys.</li>
+          <li><b>Intervention semester:</b> Fall 2025, when the code review and flipped-classroom policies were introduced.</li>
+          <li><b>AI-use proxy:</b> Ratio of pasted characters to total characters typed on coding assignments, measured from keystroke logs.</li>
+          <li><b>Comparison:</b> Pairwise comparison of exam scores against prior semesters.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Learning Framework Breakdown</h2>
+        <p>To help master the core ideas, this section explains the paper using multiple learning frameworks, moving from definitions to intuition, root-cause reasoning, and practical examples.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>1) Glossary of Key Terms</h2>
+        <ul>
+          <li><b>CS1:</b> The first programming course in a computer science curriculum, typically focused on fundamentals like variables, control flow, and basic data structures.</li>
+          <li><b>Oral code review interview:</b> A short, spoken assessment where a student explains their own code to an instructor or TA, used here as a weekly formative check.</li>
+          <li><b>Flipped classroom:</b> A course structure where students learn new material outside of class (readings, videos) and use class time for applied work and assessment instead of lecture.</li>
+          <li><b>Keystroke logging:</b> Recording how a student typed their submission (including pasted text) to estimate how much of the code came from an external source like an LLM.</li>
+          <li><b>Verification-based assessment:</b> Checking that a student understands a result, rather than trying to confirm how the result was produced.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>2) ELI5 (Explain Like I am Five)</h2>
+        <p>Imagine a cooking class that lets you use a recipe app. But every week, the chef stops by your station and asks you to explain, out loud, why you're adding salt now instead of later. You can use the app — but you still have to understand the dish you're making. If you can't explain it, the chef knows, no matter how good the plate looks.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>3) The 5 Whys (Root Cause Analysis)</h2>
+        <p><b>Goal:</b> Understand why verifying understanding, rather than restricting tools, is the proposed fix.</p>
+        <ol>
+          <li><b>Why allow generative AI in a CS1 course at all?</b> Because students already use it, and banning it is largely unenforceable.</li>
+          <li><b>Why is that risky for a first programming course?</b> Because CS1 is where students are meant to build foundational debugging and reasoning skills, which pasted code can bypass entirely.</li>
+          <li><b>Why use oral code review instead of tighter AI bans or detectors?</b> Because it verifies whether the student understands the code directly, rather than trying to detect AI authorship, which is unreliable.</li>
+          <li><b>Why pair it with a flipped classroom?</b> Because running weekly one-on-one interviews for an entire class needs in-class time that a traditional lecture format doesn't have.</li>
+          <li><b>Why does unchanged exam performance matter here?</b> Because it suggests verification-based assessment can neutralize the downside of heavier AI use, instead of needing to eliminate AI use itself.</li>
+        </ol>
+      </section>
+
+      <section class="paper-section">
+        <h2>4) Example Scenario</h2>
+        <p>A student pastes a ready-made sorting function from an LLM into their assignment. At the weekly code review, a TA asks: "Why did you choose this sort for this input, and what happens if the list has duplicates?" The student has to answer live. If they can't, it surfaces a gap in understanding immediately — before it compounds into later, harder courses that assume CS1 fundamentals are solid.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Key Findings and Insights</h2>
+        <ul>
+          <li><b>No drop in exam scores:</b> A pairwise comparison found no statistically significant change in average exam scores for Fall 2025 versus previous semesters, despite allowing AI use.</li>
+          <li><b>AI use clearly increased:</b> Keystroke logs showed a significant rise in the ratio of pasted-to-typed characters on coding assignments in Fall 2025.</li>
+          <li><b>Positive student reception:</b> End-of-semester surveys showed positive sentiment toward the code review interviews.</li>
+          <li><b>Friction was logistical, not conceptual:</b> Nearly all negative feedback related to scheduling and TA consistency, which the authors say is addressable through better scheduling tools and more rigorous TA training.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Practical Applications</h2>
+        <ul>
+          <li><b>Shift the strategy:</b> Move from an AI-detection arms race toward oral or other verification-based checks of understanding.</li>
+          <li><b>Restructure the course, not just the policy:</b> A flipped classroom is likely necessary to create the in-class time these interviews require.</li>
+          <li><b>Invest in the rollout:</b> TA training and scheduling infrastructure were the main sources of friction, not the core idea.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Caveats</h2>
+        <p>As an arXiv preprint, the paper reports qualitative and directional results (no significant change, a significant increase in pasted characters, positive survey sentiment) without published sample sizes, effect sizes, or p-values, so the numerical detail is limited to what the authors stated.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Citation</h2>
+        <p class="citation">Fowles, P., Falor, E., Bhattarai, S., Edwards, J., &amp; Poulsen, S. (2026). Allowing Generative AI in CS1 with Code Review Interviews and a Flipped Classroom. <i>arXiv preprint</i>, arXiv:2605.21374 [cs.HC]. <a href="https://arxiv.org/abs/2605.21374" target="_blank" rel="noopener">https://arxiv.org/abs/2605.21374</a></p>
+      </section>
+    </article>
+
+    <footer class="site-footer">
+      <a href="https://github.com/clarkngo/paper-explained" target="_blank" rel="noopener">View on GitHub</a>
+    </footer>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

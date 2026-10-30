@@ -3,28 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Concise, leveled breakdowns of academic papers for developers — what changed, why it matters, and how to reason about each idea from ELI5 through senior-dev depth.">
   <title>Paper Explained</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="page" id="main-content">
     <section class="hero">
       <h1>Papers Explained</h1>
       <p>Concise paper breakdowns for developers: what changed, why it matters, and how to reason about each idea at different experience levels.</p>
-      <div class="tag-row">
-        <button class="tag active" data-filter="all">All</button>
-        <button class="tag" data-filter="NLP">NLP</button>
-        <button class="tag" data-filter="Transformer">Transformer</button>
-        <button class="tag" data-filter="Software Architecture">Software Architecture</button>
-        <button class="tag" data-filter="XAI">XAI</button>
-        <button class="tag" data-filter="Predictive Maintenance">Predictive Maintenance</button>
-        <button class="tag" data-filter="Federated Learning">Federated Learning</button>
-        <button class="tag" data-filter="Edge Computing">Edge Computing</button>
-        <button class="tag" data-filter="Foundational">Foundational</button>
+      <div class="search-row">
+        <label for="search-input" class="visually-hidden">Search papers by title or topic</label>
+        <input type="search" id="search-input" class="search-input" placeholder="Search papers by title or topic…">
+      </div>
+      <div class="tag-row" role="group" aria-label="Filter by topic">
+        <button class="tag active" data-filter="all" aria-pressed="true">All</button>
+        <button class="tag" data-filter="NLP" aria-pressed="false">NLP</button>
+        <button class="tag" data-filter="Transformer" aria-pressed="false">Transformer</button>
+        <button class="tag" data-filter="Software Architecture" aria-pressed="false">Software Architecture</button>
+        <button class="tag" data-filter="XAI" aria-pressed="false">XAI</button>
+        <button class="tag" data-filter="Predictive Maintenance" aria-pressed="false">Predictive Maintenance</button>
+        <button class="tag" data-filter="Federated Learning" aria-pressed="false">Federated Learning</button>
+        <button class="tag" data-filter="Edge Computing" aria-pressed="false">Edge Computing</button>
+        <button class="tag" data-filter="Generative AI" aria-pressed="false">Generative AI</button>
+        <button class="tag" data-filter="Education" aria-pressed="false">Education</button>
+        <button class="tag" data-filter="Learning Science" aria-pressed="false">Learning Science</button>
+        <button class="tag" data-filter="CS Education" aria-pressed="false">CS Education</button>
+        <button class="tag" data-filter="Foundational" aria-pressed="false">Foundational</button>
       </div>
     </section>
 
     <h2 class="section-title">Library</h2>
+    <p class="result-count" id="result-count" aria-live="polite"></p>
     <section class="grid">
       <a href="attention-is-all-you-need.html" class="card" data-tags="NLP Transformer Foundational">
         <h3>Attention Is All You Need</h3>
@@ -48,6 +59,30 @@
         <h3>Integrating Federated Learning and Edge Computing for Privacy-Preserving and Real-Time Predictive Maintenance in Industrial IoT Systems</h3>
         <p>A decentralized industrial IoT framework that preserves privacy, cuts latency, and scales predictive maintenance across heterogeneous edge nodes.</p>
         <div class="meta"><span>Predictive Maintenance</span><span>Federated Learning</span><span>Edge Computing</span></div>
+      </a>
+
+      <a href="generative-ai-without-guardrails-can-harm-learning.html" class="card" data-tags="Generative AI Education Learning Science">
+        <h3>Generative AI Without Guardrails Can Harm Learning</h3>
+        <p>A field experiment with nearly 1,000 high school students shows unrestricted ChatGPT access hurt exam performance, while a guardrailed tutor largely avoided the harm.</p>
+        <div class="meta"><span>Generative AI</span><span>Education</span><span>Learning Science</span></div>
+      </a>
+
+      <a href="ai-tutoring-outperforms-in-class-active-learning.html" class="card" data-tags="Generative AI Education Learning Science">
+        <h3>AI Tutoring Outperforms In-Class Active Learning</h3>
+        <p>A Harvard RCT finds a purpose-built GPT-4 tutor produced bigger physics learning gains, in less time, than an in-class active learning lesson.</p>
+        <div class="meta"><span>Generative AI</span><span>Education</span><span>Learning Science</span></div>
+      </a>
+
+      <a href="allowing-generative-ai-in-cs1.html" class="card" data-tags="Generative AI CS Education Education">
+        <h3>Allowing Generative AI in CS1 with Code Review Interviews and a Flipped Classroom</h3>
+        <p>Weekly oral code-review interviews plus a flipped classroom let a CS1 course allow AI use without hurting exam scores.</p>
+        <div class="meta"><span>Generative AI</span><span>CS Education</span><span>Education</span></div>
+      </a>
+
+      <a href="reshaping-undergraduate-cs-education-in-the-generative-ai-era.html" class="card" data-tags="Generative AI CS Education Education">
+        <h3>Reshaping Undergraduate Computer Science Education in the Generative AI Era</h3>
+        <p>A 23-author NUS–Google workshop report proposes shifting CS curricula from writing code toward verifying and directing AI-generated work.</p>
+        <div class="meta"><span>Generative AI</span><span>CS Education</span><span>Education</span></div>
       </a>
     </section>
 
