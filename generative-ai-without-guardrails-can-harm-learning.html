@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A field experiment with nearly 1,000 high school students shows unrestricted ChatGPT access hurt exam performance, while a guardrailed tutor largely avoided the harm.">
+  <title>Generative AI Without Guardrails Can Harm Learning - Paper Explained</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="page" id="main-content">
+    <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
+    <article class="paper">
+      <h1>Generative AI Without Guardrails Can Harm Learning: Evidence from High School Mathematics</h1>
+
+      <section class="paper-section">
+        <h2>Core Problem and Proposed Solution</h2>
+        <p>Schools are rapidly handing students chatbot access for homework and practice, but it was unclear whether that help actually builds skill or just produces correct-looking answers. The authors ran a field experiment with high school math students to test two designs:</p>
+        <ul>
+          <li><b>GPT Base:</b> Unrestricted access to a GPT-4-powered chatbot, similar to using ChatGPT directly on practice problems.</li>
+          <li><b>GPT Tutor:</b> The same underlying model, but prompted with pedagogical guardrails (e.g. hints and scaffolding instead of direct answers) designed to keep the student doing the cognitive work.</li>
+        </ul>
+        <p>Both were compared against a no-AI control group to see which approach helped students on an exam taken afterward, without any AI assistance.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Methodology</h2>
+        <ul>
+          <li><b>Design:</b> Randomized field experiment in a single school.</li>
+          <li><b>Participants:</b> Nearly 1,000 high school math students.</li>
+          <li><b>Conditions:</b> Control (no AI), GPT Base (unrestricted chatbot), GPT Tutor (guardrailed chatbot).</li>
+          <li><b>Measures:</b> Performance during AI-assisted practice sessions, then performance on a later exam taken without AI access.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Learning Framework Breakdown</h2>
+        <p>To help master the core ideas, this section explains the paper using multiple learning frameworks, moving from definitions to intuition, root-cause reasoning, and practical examples.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>1) Glossary of Key Terms</h2>
+        <ul>
+          <li><b>Field experiment:</b> A randomized study run in a real-world setting (here, an actual classroom) rather than a lab.</li>
+          <li><b>Guardrails:</b> Deliberate constraints built into an AI tool's prompting or behavior to shape how it's used, instead of letting it do whatever the user asks.</li>
+          <li><b>GPT Base vs. GPT Tutor:</b> The same model with two different behaviors: one answers freely, the other is instructed to scaffold rather than hand over solutions.</li>
+          <li><b>Crutch effect:</b> When a tool removes the need to think, so performance with the tool doesn't transfer to performance without it.</li>
+          <li><b>Exam without AI:</b> The true test of learning in this study, since it isolates skill the student actually retained.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>2) ELI5 (Explain Like I am Five)</h2>
+        <p>Imagine doing math homework with a calculator that just tells you the final answer versus one that says "try multiplying first, what do you get?" Both calculators can make your homework look great. But only one is actually teaching you something. When the calculator gets taken away for the real test, the kid who only copied answers is stuck — the kid who was nudged through the steps isn't.</p>
+        <p><i>[Image of a split diagram: unrestricted chatbot handing over an answer vs. a guardrailed tutor asking a guiding question]</i></p>
+      </section>
+
+      <section class="paper-section">
+        <h2>3) The 5 Whys (Root Cause Analysis)</h2>
+        <p><b>Goal:</b> Understand why AI tool design, not just AI access, determines whether students actually learn.</p>
+        <ol>
+          <li><b>Why test unrestricted AI in classrooms?</b> To see whether easy access to a chatbot actually helps students learn math, not just finish homework.</li>
+          <li><b>Why might unrestricted AI hurt learning?</b> Because students can paste a problem and get the answer without doing the reasoning themselves.</li>
+          <li><b>Why does that matter if practice scores look fine?</b> Because the skill being measured is retained through effortful practice, not through having the right answer appear on a worksheet.</li>
+          <li><b>Why do practice scores rise even when learning doesn't?</b> Because the artifact being graded during practice (the submitted answer) is easy to produce with an answer-giving tool, even without understanding.</li>
+          <li><b>Why build "GPT Tutor" guardrails instead of banning AI?</b> Because the same model, prompted to scaffold instead of answer, kept students engaged in the actual reasoning and largely avoided the harm.</li>
+        </ol>
+      </section>
+
+      <section class="paper-section">
+        <h2>4) Example Scenarios</h2>
+        <p><b>Scenario A: Unrestricted homework helper</b></p>
+        <p>A student pastes a word problem into an unrestricted chatbot, copies the returned answer onto their worksheet, and submits it. The homework looks complete and correct.</p>
+        <ul>
+          <li><b>Risk:</b> The student never practiced setting up or solving the problem.</li>
+          <li><b>Consequence:</b> On a later exam without AI, that same problem type is unfamiliar in practice, even though it was "seen" during homework.</li>
+        </ul>
+
+        <p><b>Scenario B: Guardrailed tutor</b></p>
+        <p>The same student pastes the same problem into a guardrailed tutor. Instead of the answer, it asks, "What's the first step to isolate the variable?" and only confirms or redirects the student's own attempt.</p>
+        <ul>
+          <li><b>Benefit:</b> The student still does the algebraic work, with support rather than substitution.</li>
+          <li><b>Consequence:</b> Exam performance without AI stays close to the no-AI control group, instead of falling behind it.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Key Findings and Insights</h2>
+        <ul>
+          <li><b>Practice performance rose with any AI access:</b> GPT-4 access during practice improved performance by about 48% for GPT Base and about 127% for GPT Tutor, relative to the no-AI control.</li>
+          <li><b>Unguarded AI hurt later, unaided performance:</b> On the exam taken without AI, the GPT Base group scored roughly 17% lower than the control group.</li>
+          <li><b>Guardrails largely prevented the harm:</b> The GPT Tutor group's exam performance was close to the control group's, despite also getting large practice-time gains.</li>
+          <li><b>Mechanism:</b> The authors attribute the harm to a "crutch effect" — unrestricted access let students substitute AI output for their own reasoning during practice, so the practice-time boost didn't transfer into retained skill.</li>
+          <li><b>Headline takeaway:</b> The design of an AI tool's prompting and constraints, not just whether AI is "allowed," determines whether it helps or hurts learning.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Practical Applications</h2>
+        <ul>
+          <li><b>EdTech product design:</b> Chatbot-style homework helpers should default to scaffolding (hints, guiding questions) rather than direct answers.</li>
+          <li><b>Assessment design:</b> Schools should distinguish "performance with AI available" from "performance without it" when judging whether a tool is actually helping students learn.</li>
+          <li><b>Policy implication:</b> Guardrails are a deliberate design choice educators and vendors need to make explicitly, not an optional extra.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Caveats</h2>
+        <p>The experiment covered roughly six hours of exposure in one school and one subject (math), so results may not generalize to other subjects, longer timeframes, or different student populations. The 17% figure is a relative difference in exam scores between groups, not an absolute point drop.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Citation</h2>
+        <p class="citation">Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., &amp; Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. <i>Proceedings of the National Academy of Sciences</i>, 122(26), e2422633122. <a href="https://doi.org/10.1073/pnas.2422633122" target="_blank" rel="noopener">https://doi.org/10.1073/pnas.2422633122</a></p>
+      </section>
+    </article>
+
+    <footer class="site-footer">
+      <a href="https://github.com/clarkngo/paper-explained" target="_blank" rel="noopener">View on GitHub</a>
+    </footer>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

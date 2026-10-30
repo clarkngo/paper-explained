@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The transformer paper that replaced recurrence with attention, explained from ELI5 through senior-dev depth.">
   <title>Attention Is All You Need - Paper Explained</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="page" id="main-content">
     <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
     <article class="paper">
-      <h2>Attention Is All You Need</h2>
+      <h1>Attention Is All You Need</h1>
 
       <section class="paper-section">
-        <h3>Major Impacts</h3>
+        <h2>Major Impacts</h2>
         <ul>
           <li><b>Foundation for modern NLP:</b> Transformers became the base architecture for BERT, GPT, and most current language models.</li>
           <li><b>Stronger sequence modeling:</b> Self-attention improves long-range dependency handling compared to recurrent models.</li>
@@ -23,17 +25,17 @@
       </section>
 
       <section class="paper-section">
-        <h3>ELI5</h3>
+        <h2>ELI5</h2>
         <p>Imagine reading a sentence and highlighting the most important words to understand it. Transformers teach computers to do that for every word at once, so they can understand meaning faster and better.</p>
       </section>
 
       <section class="paper-section">
-        <h3>Explained to New Devs</h3>
+        <h2>Explained to New Devs</h2>
         <p>Before transformers, models like RNNs read text token-by-token. This was slow and made long context hard to retain. The transformer processes all tokens together and uses self-attention to decide which other tokens matter for each token. That shift made training more efficient and quality better.</p>
       </section>
 
       <section class="paper-section">
-        <h3>Explained to Senior Devs</h3>
+        <h2>Explained to Senior Devs</h2>
         <p>The paper proposes a purely attention-based encoder-decoder architecture with multi-head self-attention, feed-forward blocks, residuals, normalization, and positional encodings. Removing recurrence improves compute parallelism while preserving expressive power for sequence transduction. Its core contribution is an architecture-level simplification that also scales favorably with data and model size.</p>
       </section>
     </article>
@@ -42,5 +44,6 @@
       <a href="https://github.com/clarkngo/paper-explained" target="_blank" rel="noopener">View on GitHub</a>
     </footer>
   </main>
+  <script src="scripts.js"></script>
 </body>
 </html>

@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical architecture communication model that maps views to stakeholder concerns, explained from ELI5 through senior-dev depth.">
   <title>4+1 View Model - Paper Explained</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="page" id="main-content">
     <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
     <article class="paper">
-      <h2>Architectural Blueprints: The “4+1” View Model</h2>
+      <h1>Architectural Blueprints: The “4+1” View Model</h1>
 
       <section class="paper-section">
-        <h3>Major Impacts</h3>
+        <h2>Major Impacts</h2>
         <ul>
           <li><b>Shared architecture language:</b> Introduced a structured way to communicate system design across stakeholders.</li>
           <li><b>Concern-driven documentation:</b> Separates functional, runtime, development, and deployment concerns.</li>
@@ -23,17 +25,17 @@
       </section>
 
       <section class="paper-section">
-        <h3>ELI5</h3>
+        <h2>ELI5</h2>
         <p>Designing software is like planning a building: electricians, plumbers, and owners each need different blueprints. The 4+1 model gives each audience the right view, then checks them together with real scenarios.</p>
       </section>
 
       <section class="paper-section">
-        <h3>Explained to New Devs</h3>
+        <h2>Explained to New Devs</h2>
         <p>Instead of one giant architecture diagram, use multiple views: logical (features), process (runtime behavior), development (code organization), and physical (deployment). The extra +1 view is real scenarios that connect and validate all four.</p>
       </section>
 
       <section class="paper-section">
-        <h3>Explained to Senior Devs</h3>
+        <h2>Explained to Senior Devs</h2>
         <p>The model is a communication and validation framework, not just a notation preference. It explicitly decomposes architecture concerns so teams can reason about trade-offs independently, then reconcile them through scenario-based consistency checks. This reduces hidden mismatches between implementation, operations, and stakeholder expectations.</p>
       </section>
     </article>
@@ -42,5 +44,6 @@
       <a href="https://github.com/clarkngo/paper-explained" target="_blank" rel="noopener">View on GitHub</a>
     </footer>
   </main>
+  <script src="scripts.js"></script>
 </body>
 </html>
