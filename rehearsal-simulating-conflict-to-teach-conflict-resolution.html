@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A CHI 2024 Stanford HCI study: participants who rehearsed conflicts with an IRP-grounded LLM simulation cut escalating strategies by 67% and doubled cooperative ones in a later real, unaided dispute.">
+  <title>Rehearsal: Simulating Conflict to Teach Conflict Resolution - Paper Explained</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="page" id="main-content">
+    <nav class="paper-nav"><a href="index.html">&larr; Back to library</a></nav>
+    <article class="paper">
+      <h1>Rehearsal: Simulating Conflict to Teach Conflict Resolution</h1>
+
+      <section class="paper-section">
+        <h2>Core Problem and Proposed Solution</h2>
+        <p>Interpersonal conflict is unavoidable, and like most skills, handling it well improves with deliberate practice and feedback. But almost no one gets that practice — people mostly learn to navigate conflict by living through it badly, in real situations where experimenting with a riskier approach has real costs. The authors introduce <b>Rehearsal</b>, a system that lets a user practice an upcoming or recurring conflict with a simulated version of the other person, branch into "what if?" alternatives to see how different moves play out, and receive feedback grounded in conflict-resolution theory rather than generic LLM chatter.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Methodology</h2>
+        <ul>
+          <li><b>System:</b> Rehearsal simulates an interlocutor and generates feedback using <b>IRP prompting</b> — conditioning the language model's output on the Interest-Rights-Power (IRP) framework from conflict-resolution theory, rather than letting it role-play unconstrained.</li>
+          <li><b>Scenarios:</b> Users can rehearse predefined conflicts (ranging from workplace disputes to personal relationships) or author their own.</li>
+          <li><b>Evaluation design:</b> A between-subjects study with 40 participants. One group trained using Rehearsal; a control group instead studied lecture material covering the same IRP theory.</li>
+          <li><b>Outcome measure:</b> After training, every participant had a real, unaided conflict with a confederate (a trained collaborator playing a scripted counterpart), and researchers coded which conflict strategies they used.</li>
+          <li><b>Venue:</b> Published at CHI 2024 (ACM Conference on Human Factors in Computing Systems); authors are affiliated with Stanford's HCI group.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Learning Framework Breakdown</h2>
+        <p>To help master the core ideas, this section explains the paper using multiple learning frameworks, moving from definitions to intuition, root-cause reasoning, and practical examples.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>1) Glossary of Key Terms</h2>
+        <ul>
+          <li><b>Rehearsal:</b> The paper's system name — an LLM-based tool for practicing conflicts before they happen for real.</li>
+          <li><b>IRP framework (Interest-Rights-Power):</b> A conflict-resolution theory distinguishing how people handle disputes depending on whether they appeal to underlying interests, formal or normative rights, or raw power.</li>
+          <li><b>IRP prompting:</b> The paper's technique for conditioning an LLM's generated utterances and feedback on the IRP framework, so simulated conflicts and coaching stay grounded in that theory instead of drifting into generic dialogue.</li>
+          <li><b>Confederate:</b> A trained experimental collaborator who, without the participant's knowledge of the full setup, plays a scripted role in the study's real-world conflict interaction.</li>
+          <li><b>Counterfactual ("what if?") exploration:</b> The ability to rewind a rehearsed conversation and try a different response, to compare how alternate strategies change where the conflict goes.</li>
+          <li><b>Escalating/competitive strategy vs. cooperative strategy:</b> Conflict-handling moves that intensify opposition and raise the stakes, versus moves that seek a mutually acceptable resolution.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>2) ELI5 (Explain Like I am Five)</h2>
+        <p>Imagine practicing an argument with a disagreement-robot before you have the real one. The robot plays the person you're at odds with, and you can try saying different things and see how each one might go — then rewind and try again. Afterward, it tells you which of your moves tend to make fights worse and which tend to calm them down. In this study, people who practiced this way, then had a real disagreement with a stranger, argued far less aggressively than people who had only read a theory handout about conflict beforehand.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>3) The 5 Whys (Root Cause Analysis)</h2>
+        <p><b>Goal:</b> Understand why rehearsing conflict with a theory-grounded LLM beats studying conflict theory directly.</p>
+        <ol>
+          <li><b>Why do people handle conflict poorly?</b> Because almost no one gets deliberate, low-stakes practice with feedback — most people's "training" is simply having lived through past conflicts badly.</li>
+          <li><b>Why is that practice hard to get in real life?</b> Because a real counterpart has real feelings and real stakes, so trying out a riskier or unfamiliar strategy on them is costly and uncomfortable.</li>
+          <li><b>Why can a language model fill that gap?</b> Because it can play a believable, disposable stand-in for the other person, letting a user try, fail, and retry strategies with no real-world consequences.</li>
+          <li><b>Why constrain the LLM with the IRP framework instead of letting it role-play freely?</b> Because unconstrained role-play tends to produce generic, theory-free dialogue; conditioning on IRP keeps both the simulated conflict and the feedback tied to a validated model of how disputes escalate or resolve.</li>
+          <li><b>Why test it with a real confederate conflict instead of just self-reported confidence?</b> Because the real test of a practiced interpersonal skill is whether it transfers to an actual, unaided interaction — not just whether the user felt more prepared going in.</li>
+        </ol>
+      </section>
+
+      <section class="paper-section">
+        <h2>4) Example Scenarios</h2>
+        <p><b>Scenario A: Rehearsing a workplace dispute</b></p>
+        <p>A user preparing to confront a coworker over credit for shared work first tries opening with blame; the simulated coworker gets defensive and the exchange stalls — a competitive, escalating pattern. The user then rewinds and tries naming a shared interest ("we both want this project to land well"), and the simulated conversation moves toward a cooperative resolution instead.</p>
+        <ul>
+          <li><b>Reward:</b> The user can see, before the real conversation, that an interests-based opening outperforms a blame-based one — without risking the actual relationship to find that out.</li>
+          <li><b>Risk:</b> The simulated coworker's reactions are still a model's guess at how a specific real person will respond, which could build overconfidence about how the real conversation will unfold.</li>
+        </ul>
+
+        <p><b>Scenario B: The study's confederate conflict</b></p>
+        <p>After training — either with Rehearsal or with the lecture-only control material — a participant has a real, unaided dispute with a confederate playing a scripted counterpart. Researchers code the strategies each participant actually uses in that live exchange.</p>
+        <ul>
+          <li><b>Reward:</b> This is a genuine behavioral test, not a self-report — it measures whether practice actually changed how people argued, not just how prepared they felt.</li>
+          <li><b>Risk:</b> A single scripted confederate interaction is still a controlled proxy; it may not capture the dynamics of a conflict with someone the person has an ongoing relationship with, like a manager or family member.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Key Findings and Insights</h2>
+        <ul>
+          <li><b>Large behavioral effect:</b> Compared with the lecture-only control group, Rehearsal-trained participants used escalating, competitive strategies about 67% less often in their later real conflict with a confederate.</li>
+          <li><b>Cooperative strategies roughly doubled:</b> The same participants used cooperative strategies about twice as often as the control group in that same real interaction.</li>
+          <li><b>Theory-grounding matters, not just "an LLM":</b> The authors frame off-the-shelf LLM role-play (e.g., a bare ChatGPT conversation) as falling short on its own; IRP prompting is what keeps the simulated conflict and its feedback tied to validated conflict-resolution theory.</li>
+          <li><b>Practice beats lecture:</b> Both groups studied the same underlying IRP theory, but only the group that got to rehearse it against a simulated interlocutor — including branching into "what if?" alternatives — showed the behavior change in a real conflict.</li>
+          <li><b>Broader claim:</b> The authors position this as evidence that LLMs show real promise as tools for teaching interpersonal, "soft" skills, not just for information or writing tasks.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Practical Applications</h2>
+        <ul>
+          <li><b>Workplace and HR training:</b> A low-stakes space to rehearse difficult conversations — performance feedback, layoffs, interpersonal disputes — before having them for real.</li>
+          <li><b>Education and social-emotional learning:</b> Tools that let students practice de-escalating disagreements with peers, with feedback grounded in a conflict-resolution framework rather than generic chatbot responses.</li>
+          <li><b>Coaching and therapy adjuncts:</b> A rehearsal space to prepare for one specific hard conversation, distinct from an always-on AI companion or confidant.</li>
+          <li><b>Design lesson for LLM-based skill trainers generally:</b> Ground the model's generated behavior in a validated theory or framework for the target skill, rather than leaving it to free-form role-play — the paper's results suggest that constraint is what makes the practice (and the feedback on it) actually useful.</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>Caveats</h2>
+        <p>This is a single between-subjects study with 40 participants — a meaningful effect size, but a modest sample for broad generalization. The control condition was lecture-only, so the study shows that rehearsing with Rehearsal beats studying the theory without practicing it; it doesn't fully isolate how much of the gain comes from practicing with an LLM specifically versus structured practice against any partner. The outcome conflict was a single scripted confederate interaction, which is a reasonable proxy but may not capture the dynamics of conflicts with someone in an ongoing real relationship, such as a manager or family member. This page is based on the published abstract and available summaries of the paper; detailed statistics and system implementation details should be checked against the full text.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Citation</h2>
+        <p class="citation">Shaikh, O., Chai, V., Gelfand, M. J., Yang, D., &amp; Bernstein, M. S. (2024). Rehearsal: Simulating Conflict to Teach Conflict Resolution. In <i>Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24)</i>. ACM. <a href="https://doi.org/10.48550/arXiv.2309.12309" target="_blank" rel="noopener">https://doi.org/10.48550/arXiv.2309.12309</a></p>
+      </section>
+    </article>
+
+    <footer class="site-footer">
+      <a href="https://github.com/clarkngo/paper-explained" target="_blank" rel="noopener">View on GitHub</a>
+    </footer>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
